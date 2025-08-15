@@ -6,6 +6,7 @@
 }
 body {
   overflow-y: scroll;
+  overflow-x: hidden;
   background-color: hsl(0, 0%, 98%);
 }
 .heroImage {
@@ -13,16 +14,30 @@ body {
   width: 100vw;
   position: relative;
 }
-.heroImage img {
+.heroImage .img {
+  background-image: url("images/bg-mobile-light.jpg");
   height: 100%;
   width: 100%;
+  background-size: cover;
+}
+.theme {
+width: 5%;
+}
+ .themeImage {
+  background-image: url("images/icon-moon.svg");
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  position: absolute;
   background-size: contain;
+  right: 0px;
 }
 .content {
   max-width: 80vw;
   margin: auto;
 }
 .heading {
+  display: flex;
   position: absolute;
   top: 30%;
   color: hsl(0, 0%, 98%);
@@ -33,7 +48,7 @@ body {
   width: 80%;
   margin: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-border-radius: 7px;
+  border-radius: 7px;
 }
 .addTask {
   display: flex;
@@ -61,8 +76,11 @@ border-radius: 7px;
 #cross {
   background: none;
   border: none;
-  height: 1.5vh;
+  height: 10px;
   justify-self: end;
+}
+#cross img {
+  height: 100%;
 }
 .tasklist {
   display: flex;
@@ -108,10 +126,92 @@ border-radius: 7px;
   display: flex;
   align-items: center;
 }
-.footer{
-    background-color: white;
+.footer {
+  background-color: white;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  color: hsl(236, 9%, 61%);
+  border-radius: 7px;
+  height: 8vh;
+  align-items: center;
+  padding: 5%;
+  font-size: 14px;
 }
-.filter{
-    position: fixed;
-   
+.filter {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7vh;
+  width: 100%;
+  justify-self: anchor-center;
+  border-radius: 5px;
+  padding: 4%;
+  gap: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.drag {
+  position: absolute;
+  top: 155px;
+  justify-self: anchor-center;
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  padding-bottom: 80px;
+}
+@media (min-width: 768px) {
+  .heroImage {
+    height: 35vh;
+  }
+  .heroImage .img {
+    background-image: url("images/bg-desktop-light.jpg");
+  }
+  .content {
+    width: 50vw;
+    margin: auto;
+  }
+  .ToDoList {
+    width: 50%;
+  }
+  .footer {
+    font-size: 11px;
+    justify-content: space-between;
+  }
+  .filter {
+    position: static;
+    box-shadow: none;
+    padding: 0px;
+    width: fit-content;
+  }
+  .drag {
+    top: 80px;
+  }
+}
+@media (min-width: 1024px) {
+  .content {
+    width: 30vw;
+    margin: auto;
+  }
+  .ToDoList {
+    width: 33%;
+  }
+  .task #taskstatus {
+    height: 1vh;
+    width: 1vw;
+  }
+  .task input {
+    font-size: 14px;
+  }
+
+  .filter {
+    gap: 10px;
+  }
+}
+@media (min-width: 1440px) {
+  .footer {
+    font-size: 12px;
+  }
 }
