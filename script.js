@@ -24,13 +24,37 @@ function clear() {
   });
 }
 clear();
+
 function createNewToDo() {
-  const newTask = document.querySelector(".newTask");
   const addTask = document.querySelector(".addTask");
-  const taskstatus = addTask.querySelector("taskstatus");
-  const taskList = document.querySelector(".taskList");
+  const taskstatus = addTask.querySelector(".taskstatus");
+  const taskList = document.querySelector(".tasklist");
+  const newTaskInput = document.querySelector(".newTask");
   taskstatus.addEventListener("click", () => {
+    const newTask = document.createElement("div");
+    newTask.className = "task";
+
+    const left = document.createElement("div");
+    left.className = "left";
+
+    const taskstatus = document.createElement("button");
+    taskstatus.className = "taskstatus";
+
+    taskstatus.addEventListener("click", () => {
+      taskstatus.classList.toggle("checked");
+      goal.classList.toggle("checked");
+    });
+
+    const goal = document.createElement("span");
+    goal.className = "goal";
+
+    goal.textContent = newTaskInput.value;
+
+    left.appendChild(taskstatus);
+    left.appendChild(goal);
+    newTask.appendChild(left);
     taskList.appendChild(newTask);
+    newTaskInput.value = "";
   });
 }
-createNewToDo()
+createNewToDo();

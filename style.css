@@ -96,7 +96,7 @@ body {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
-.task input {
+.task span {
   border: none;
   outline: none;
   color: hsl(235, 19%, 35%);
@@ -242,7 +242,7 @@ body.dark-mode .addTask input {
 body.dark-mode .tasklist {
   background-color: hsl(235, 24%, 19%);
 }
-body.dark-mode .tasklist input {
+body.dark-mode .tasklist span {
   background-color: hsl(235, 24%, 19%);
   color: hsl(236, 33%, 92%);
 }
@@ -319,7 +319,7 @@ body.dark-mode .Clear:hover {
     display: none;
     height: 12px;
   }
-  .task input:hover {
+  .task span:hover {
     cursor: pointer;
   }
   .task:hover .cross {
@@ -350,7 +350,7 @@ body.dark-mode .Clear:hover {
     height: 1vh;
     width: 1vw;
   }
-  .task input {
+  .task span {
     font-size: 14px;
   }
 
@@ -374,7 +374,7 @@ body.dark-mode .Clear:hover {
   .addTask input {
     font-size: 30px;
   }
-  .task input {
+  .task span {
     font-size: 30px;
   }
   .footer {
