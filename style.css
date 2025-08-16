@@ -1,387 +1,412 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Josefin Sans", sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Josefin Sans", sans-serif;
 }
 body {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  background-color: hsl(0, 0%, 98%);
+	overflow-y: scroll;
+	overflow-x: hidden;
+	background-color: hsl(0, 0%, 98%);
 }
 .heroImage {
-  height: 30vh;
-  width: 100vw;
-  position: relative;
+	height: 30vh;
+	width: 100vw;
+	position: relative;
 }
 .heroImage .img {
-  background-image: url("images/bg-mobile-light.jpg");
-  height: 100%;
-  width: 100%;
-  background-size: cover;
+	background-image: url("images/bg-mobile-light.jpg");
+	height: 100%;
+	width: 100%;
+	background-size: cover;
 }
 
 .themeImage {
-  background-image: url("images/icon-moon.svg");
-  height: 20px;
-  width: 20px;
-  background-size: contain;
+	background-image: url("images/icon-moon.svg");
+	height: 20px;
+	width: 20px;
+	background-size: contain;
 }
 .content {
-  max-width: 80vw;
-  margin: auto;
+	max-width: 80vw;
+	margin: auto;
 }
 .heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
-  margin: auto;
-  left: 0;
-  right: 0;
-  position: absolute;
-  top: 30%;
-  color: hsl(0, 0%, 98%);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 80%;
+	margin: auto;
+	left: 0;
+	right: 0;
+	position: absolute;
+	top: 30%;
+	color: hsl(0, 0%, 98%);
 }
 .ToDoList {
-  position: absolute;
-  top: 55%;
-  width: 80%;
-  margin: auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 7px;
+	position: absolute;
+	top: 55%;
+	width: 80%;
+	margin: auto;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	border-radius: 7px;
 }
 .addTask {
-  display: flex;
-  align-items: center;
-  padding: 5%;
-  background-color: white;
-  width: 100%;
-  border-radius: 7px;
-  gap: 5%;
-  height: 8vh;
-  margin-bottom: 2vh;
+	display: flex;
+	align-items: center;
+	padding: 5%;
+	background-color: white;
+	width: 100%;
+	border-radius: 7px;
+	gap: 5%;
+	height: 8vh;
+	margin-bottom: 2vh;
 }
 .addTask input {
-  border: none;
-  outline: none;
+	border: none;
+	outline: none;
 }
 .addTask .taskstatus {
-  height: 2vh;
-  border: 1px solid hsl(234, 39%, 85%);
-  width: 2vw;
-  padding: 3%;
-  border-radius: 50%;
-  background: none;
+	height: 2vh;
+	border: 1px solid hsl(234, 39%, 85%);
+	width: 2vw;
+	padding: 3%;
+	border-radius: 50%;
+	background: none;
 }
 .cross {
-  background: none;
-  border: none;
-  height: 10px;
-  justify-self: end;
+	background: none;
+	border: none;
+	height: 10px;
+	justify-self: end;
 }
 .cross:hover {
-  cursor: pointer;
+	cursor: pointer;
 }
 .cross img {
-  height: 100%;
+	height: 100%;
 }
 .tasklist {
-  display: flex;
-  align-items: center;
-  background-color: white;
-  width: 100%;
-  border-radius: 7px;
-  flex-direction: column;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+	display: flex;
+	align-items: center;
+	background-color: white;
+	width: 100%;
+	border-radius: 7px;
+	flex-direction: column;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
 }
 .task span {
-  border: none;
-  outline: none;
-  color: hsl(235, 19%, 35%);
-  font-size: 12px;
-  min-width: 0;
-  flex: 1;
+	border: none;
+	outline: none;
+	color: hsl(235, 19%, 35%);
+	font-size: 12px;
+	min-width: 0;
+	flex: 1;
 }
 .task {
-  padding: 5%;
-  display: flex;
-  height: 9vh;
-  align-items: center;
-  border-bottom: 0.5px solid hsl(233, 11%, 84%);
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
+	padding: 5%;
+	display: flex;
+	height: 9vh;
+	align-items: center;
+	border-bottom: 0.5px solid hsl(233, 11%, 84%);
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+   cursor: grab;
+  user-select: none;
+}
+.task.dragging {
+  opacity: 0.5;
+  cursor: grabbing;
+  background: #f0f0f0;
+}
+body.dark-mode .task.dragging {
+  background: hsl(235, 24%, 19%);
 }
 .task .taskstatus {
-  height: 2vh;
-  width: 2vw;
-  border-radius: 50%;
-  padding: 3%;
-  border: 1px solid hsl(234, 39%, 85%);
-  background: none;
+	height: 2vh;
+	width: 2vw;
+	border-radius: 50%;
+	padding: 3%;
+	border: 1px solid hsl(234, 39%, 85%);
+	background: none;
 }
 
 .taskstatus:hover:not(.checked) {
-  border: 1px solid transparent;
-  background: linear-gradient(white, white) padding-box,
-    linear-gradient(135deg, #3b82f6, #9333ea) border-box;
-  cursor: pointer;
+	border: 1px solid transparent;
+	background: linear-gradient(white, white) padding-box,
+		linear-gradient(135deg, #3b82f6, #9333ea) border-box;
+	cursor: pointer;
 }
 
 .taskstatus.checked {
-  border: none;
-  background: url("images/icon-check.svg") no-repeat center,
-    linear-gradient(135deg, #3b82f6, #9333ea);
-  background-size: 12px, cover;
+	border: none;
+	background: url("images/icon-check.svg") no-repeat center,
+		linear-gradient(135deg, #3b82f6, #9333ea);
+	background-size: 12px, cover;
 }
 body.dark-mode .taskstatus:hover:not(.checked) {
-    border: 2px solid transparent;
-    border-radius: 50%;
-    background: linear-gradient(hsl(235, 24%, 19%), hsl(235, 24%, 19%))
-        padding-box,
-      linear-gradient(135deg, #3b82f6, #9333ea) border-box;
-    cursor: pointer;
-    height: 2vh;
-    width: 2vw;
-  }
+	border: 2px solid transparent;
+	border-radius: 50%;
+	background: linear-gradient(hsl(235, 24%, 19%), hsl(235, 24%, 19%))
+			padding-box,
+		linear-gradient(135deg, #3b82f6, #9333ea) border-box;
+	cursor: pointer;
+	height: 2vh;
+	width: 2vw;
+}
+.taskstatus:hover:disabled {
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+body.dark-mode .taskstatus:hover:disabled {
+	cursor: not-allowed;
+	opacity: 0.5;
+}
 .goal.checked {
-  text-decoration: line-through !important;
-  color: hsl(234, 39%, 85%);
+	text-decoration: line-through !important;
+	color: hsl(234, 39%, 85%);
+}
+body.dark-mode .goal.checked {
+	text-decoration: line-through !important;
+	color: hsl(235, 16%, 43%);
 }
 .left {
-  gap: 7px;
-  display: flex;
-  align-items: center;
-  flex: 1;
+	gap: 7px;
+	display: flex;
+	align-items: center;
+	flex: 1;
 }
 .right {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 .footer {
-  background-color: white;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  color: hsl(236, 9%, 61%);
-  border-radius: 7px;
-  height: 8vh;
-  align-items: center;
-  padding: 5%;
-  font-size: 14px;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
+	background-color: white;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	color: hsl(236, 9%, 61%);
+	border-radius: 7px;
+	height: 8vh;
+	align-items: center;
+	padding: 5%;
+	font-size: 14px;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
 }
 .itemsLeft:hover {
-  color: black;
-  cursor: pointer;
+	color: black;
+	cursor: pointer;
 }
 .Clear:hover {
-  color: black;
-  cursor: pointer;
+	color: black;
+	cursor: pointer;
 }
 .filter {
-  position: absolute;
-  background-color: rgb(255, 255, 255);
-  top: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 7vh;
-  width: 100%;
-  justify-self: anchor-center;
-  border-radius: 5px;
-  padding: 4%;
-  gap: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	position: absolute;
+	background-color: rgb(255, 255, 255);
+	top: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 7vh;
+	width: 100%;
+	justify-self: anchor-center;
+	border-radius: 5px;
+	padding: 4%;
+	gap: 15px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .all:hover {
-  color: black;
-  cursor: pointer;
+	color: black;
+	cursor: pointer;
 }
 .active:hover {
-  color: black;
-  cursor: pointer;
+	color: black;
+	cursor: pointer;
 }
 .completed:hover {
-  color: black;
-  cursor: pointer;
+	color: black;
+	cursor: pointer;
 }
 .drag {
-  position: absolute;
-  top: 155px;
-  justify-self: anchor-center;
-  width: 100%;
-  text-align: center;
-  font-size: 13px;
-  padding-bottom: 80px;
+	position: absolute;
+	top: 155px;
+	justify-self: anchor-center;
+	width: 100%;
+	text-align: center;
+	font-size: 13px;
+	padding-bottom: 80px;
 }
 .themeImage:hover {
-  cursor: pointer;
+	cursor: pointer;
+}
+.activeFilter {
+	color: #3b82f6;
 }
 /* CSS FOR DARK MODE */
 body.dark-mode .themeImage {
-  background-image: url("images/icon-sun.svg");
+	background-image: url("images/icon-sun.svg");
 }
 
 body.dark-mode {
-  background-color: hsl(235, 21%, 11%);
+	background-color: hsl(235, 21%, 11%);
 }
 body.dark-mode .heroImage .img {
-  background-image: url("images/bg-mobile-dark.jpg");
+	background-image: url("images/bg-mobile-dark.jpg");
 }
 body.dark-mode .addTask {
-  background-color: hsl(235, 24%, 19%);
+	background-color: hsl(235, 24%, 19%);
 }
 body.dark-mode .addTask input {
-  background-color: hsl(235, 24%, 19%);
-  color: hsl(236, 33%, 92%);
+	background-color: hsl(235, 24%, 19%);
+	color: hsl(236, 33%, 92%);
 }
 body.dark-mode .tasklist {
-  background-color: hsl(235, 24%, 19%);
+	background-color: hsl(235, 24%, 19%);
 }
 body.dark-mode .tasklist span {
-  background-color: hsl(235, 24%, 19%);
-  color: hsl(236, 33%, 92%);
+	background-color: hsl(235, 24%, 19%);
+	color: hsl(236, 33%, 92%);
 }
 body.dark-mode .ToDoList {
-  box-shadow: 0 16px 18px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 16px 18px rgba(0, 0, 0, 0.4);
 }
 body.dark-mode .footer {
-  background-color: hsl(235, 24%, 19%);
+	background-color: hsl(235, 24%, 19%);
 }
 body.dark-mode .filter {
-  background-color: hsl(235, 24%, 19%);
-  box-shadow: 0 16px 18px rgba(0, 0, 0, 0.4);
+	background-color: hsl(235, 24%, 19%);
+	box-shadow: 0 16px 18px rgba(0, 0, 0, 0.4);
 }
 .task {
-  border-bottom: 1px solid hsl(234, 39%, 85%, 0.2);
+	border-bottom: 1px solid hsl(234, 39%, 85%, 0.2);
 }
 body.dark-mode .taskstatus {
-  border: 2px solid hsl(234, 39%, 85%, 0.1);
+	border: 2px solid hsl(234, 39%, 85%, 0.1);
 }
 body.dark-mode .all:hover {
-  color: white;
+	color: white;
 }
 body.dark-mode .active:hover {
-  color: white;
+	color: white;
 }
 body.dark-mode .completed:hover {
-  color: white;
+	color: white;
 }
 body.dark-mode .itemsLeft:hover {
-  color: white;
+	color: white;
 }
 body.dark-mode .Clear:hover {
-  color: white;
+	color: white;
 }
 
 @media (min-width: 768px) {
-  body.dark-mode .heroImage .img {
-    background-image: url("images/bg-desktop-dark.jpg");
-  }
-  .heroImage {
-    height: 35vh;
-  }
-  .heroImage .img {
-    background-image: url("images/bg-desktop-light.jpg");
-  }
-  .heading {
-    width: 50%;
-  }
-  .content {
-    width: 50vw;
-    margin: auto;
-  }
-  .ToDoList {
-    width: 50%;
-  }
-  .footer {
-    font-size: 11px;
-    justify-content: space-between;
-  }
-  .filter {
-    position: static;
-    box-shadow: none;
-    padding: 0px;
-    width: fit-content;
-  }
-  body.dark-mode .filter {
-    box-shadow: none;
-  }
-  .drag {
-    top: 80px;
-  }
-  
-  .cross {
-    display: none;
-    height: 12px;
-  }
-  .task span:hover {
-    cursor: pointer;
-  }
-  .task:hover .cross {
-    display: block;
-    cursor: pointer;
-  }
+	body.dark-mode .heroImage .img {
+		background-image: url("images/bg-desktop-dark.jpg");
+	}
+	.heroImage {
+		height: 35vh;
+	}
+	.heroImage .img {
+		background-image: url("images/bg-desktop-light.jpg");
+	}
+	.heading {
+		width: 50%;
+	}
+	.content {
+		width: 50vw;
+		margin: auto;
+	}
+	.ToDoList {
+		width: 50%;
+	}
+	.footer {
+		font-size: 11px;
+		justify-content: space-between;
+	}
+	.filter {
+		position: static;
+		box-shadow: none;
+		padding: 0px;
+		width: fit-content;
+	}
+	body.dark-mode .filter {
+		box-shadow: none;
+	}
+	.drag {
+		top: 80px;
+	}
+
+	.cross {
+		display: none;
+		height: 12px;
+	}
+	.task span:hover {
+		cursor: pointer;
+	}
+	.task:hover .cross {
+		display: block;
+		cursor: pointer;
+	}
 }
 @media (min-width: 1024px) {
-  .content {
-    width: 30vw;
-    margin: auto;
-  }
-  .ToDoList {
-    width: 33%;
-  }
-  .heading {
-    width: 31%;
-    font-size: 20px;
-  }
-  .themeImage {
-    height: 30px;
-    width: 30px;
-  }
-  .cross {
-    height: 15px;
-  }
-  .task .taskstatus {
-    height: 1vh;
-    width: 1vw;
-  }
-  .task span {
-    font-size: 14px;
-  }
+	.content {
+		width: 30vw;
+		margin: auto;
+	}
+	.ToDoList {
+		width: 33%;
+	}
+	.heading {
+		width: 31%;
+		font-size: 20px;
+	}
+	.themeImage {
+		height: 30px;
+		width: 30px;
+	}
+	.cross {
+		height: 15px;
+	}
+	.task .taskstatus {
+		height: 1vh;
+		width: 1vw;
+	}
+	.task span {
+		font-size: 14px;
+	}
 
-  .filter {
-    gap: 10px;
-  }
+	.filter {
+		gap: 10px;
+	}
 }
 @media (min-width: 1440px) {
-  .footer {
-    font-size: 12px;
-  }
+	.footer {
+		font-size: 12px;
+	}
 }
 @media (min-width: 2560px) {
-  .heading {
-    font-size: 27px;
-  }
-  .themeImage {
-    height: 40px;
-    width: 40px;
-  }
-  .addTask input {
-    font-size: 30px;
-  }
-  .task span {
-    font-size: 30px;
-  }
-  .footer {
-    font-size: 25px;
-  }
-  .drag {
-    top: 160px;
-    font-size: 23px;
-  }
+	.heading {
+		font-size: 27px;
+	}
+	.themeImage {
+		height: 40px;
+		width: 40px;
+	}
+	.addTask input {
+		font-size: 30px;
+	}
+	.task span {
+		font-size: 30px;
+	}
+	.footer {
+		font-size: 25px;
+	}
+	.drag {
+		top: 160px;
+		font-size: 23px;
+	}
 }

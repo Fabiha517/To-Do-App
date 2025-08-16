@@ -1,146 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="wclassth=device-wclassth, initial-scale=1.0"
-    />
-    <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="wclassth=device-wclassth, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png" />
 
-    <title>Frontend Mentor | Todo app</title>
+		<title>Frontend Mentor | Todo app</title>
 
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Flow+Circular&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Flow+Circular&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+			rel="stylesheet" />
+	</head>
 
-  <body>
-    <div class="heroImage">
-      <div class="img"></div>
-      <section class="content">
-        <div class="heading">
-          <h1>T O D O</h1>
+	<body>
+		<div class="heroImage">
+			<div class="img"></div>
+			<section class="content">
+				<div class="heading">
+					<h1>T O D O</h1>
 
-          <div class="themeImage"></div>
-        </div>
-        <div class="ToDoList">
-          <div class="addTask">
-            <div class="left">
-              <button class="taskstatus"></button
-              ><input
-                class="newTask"
-                type="text"
-                placeholder="Create a new todo..."
-              />
-            </div>
-          </div>
-          <!-- -->
-          <div class="tasklist">
-            <div class="task">
-              <div class="left">
-                <button class="taskstatus"></button
-                ><span class="goal" >
-                  Complete online Javascript course. 
-                </span>
-              </div>
-              <div class="right">
-                <button class="cross">
-                  <img src="images/icon-cross.svg" alt="" />
-                </button>
-              </div>
-            </div>
-            <div class="task">
-              <div class="left">
-                <button class="taskstatus"></button
-                ><span class="goal"  type="text">
-                  Jog around the park 3x
-                </span>
-              </div>
-              <div class="right">
-                <button class="cross">
-                  <img src="images/icon-cross.svg" alt="" />
-                </button>
-              </div>
-            </div>
-            <div class="task">
-              <div class="left">
-                <button class="taskstatus"></button>
-                <span class="goal" >
-                  10 minutes meditation
-                </span>
-              </div>
-              <div class="right">
-                <button class="cross">
-                  <img src="images/icon-cross.svg" alt="" />
-                </button>
-              </div>
-            </div>
-            <div class="task">
-              <div class="left">
-                <button class="taskstatus"></button
-                ><span class="goal"  
-                  >Read for 1 hour</span
-                >
-              </div>
-              <div class="right">
-                <button class="cross">
-                  <img src="images/icon-cross.svg" alt="" />
-                </button>
-              </div>
-            </div>
-            <div class="task">
-              <div class="left">
-                <button class="taskstatus"></button
-                ><span class="goal"  >
-                  Pick up groceries</span
-                >
-              </div>
-              <div class="right">
-                <button class="cross">
-                  <img src="images/icon-cross.svg" alt="" />
-                </button>
-              </div>
-            </div>
-            <div class="task">
-              <div class="left">
-                <button class="taskstatus"></button
-                ><span class="goal"  >
-                  Complete Todo app on Fronend Mentor</span
-                >
-              </div>
-              <div class="right">
-                <button class="cross">
-                  <img src="images/icon-cross.svg" alt="" />
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="footer">
-            <div class="itemsLeft">items left</div>
-            <div class="filter">
-              <div class="all">All</div>
-              <div class="active">Active</div>
-              <div class="completed">Completed</div>
-            </div>
-            <div class="Clear">Clear Completed</div>
-            <div class="drag">Drag and drop to reorder list</div>
-          </div>
-        </div>
-      </section>
-    </div>
+					<div class="themeImage"></div>
+				</div>
+				<div class="ToDoList">
+					<div class="addTask">
+						<div class="left">
+							<button class="taskstatus"></button
+							><input
+								class="newTask"
+								type="text"
+								placeholder="Create a new todo..." />
+						</div>
+					</div>
+					<!-- -->
+					<div class="tasklist">
+						<div class="task">
+							<div class="left">
+								<button class="taskstatus"></button
+								><span class="goal"> Complete online Javascript course. </span>
+							</div>
+							<div class="right">
+								<button class="cross">
+									<img src="images/icon-cross.svg" alt="" />
+								</button>
+							</div>
+						</div>
+						<div class="task">
+							<div class="left">
+								<button class="taskstatus"></button
+								><span class="goal" type="text"> Jog around the park 3x </span>
+							</div>
+							<div class="right">
+								<button class="cross">
+									<img src="images/icon-cross.svg" alt="" />
+								</button>
+							</div>
+						</div>
+						<div class="task">
+							<div class="left">
+								<button class="taskstatus"></button>
+								<span class="goal"> 10 minutes meditation </span>
+							</div>
+							<div class="right">
+								<button class="cross">
+									<img src="images/icon-cross.svg" alt="" />
+								</button>
+							</div>
+						</div>
+						<div class="task">
+							<div class="left">
+								<button class="taskstatus"></button
+								><span class="goal">Read for 1 hour</span>
+							</div>
+							<div class="right">
+								<button class="cross">
+									<img src="images/icon-cross.svg" alt="" />
+								</button>
+							</div>
+						</div>
+						<div class="task">
+							<div class="left">
+								<button class="taskstatus"></button
+								><span class="goal"> Pick up groceries</span>
+							</div>
+							<div class="right">
+								<button class="cross">
+									<img src="images/icon-cross.svg" alt="" />
+								</button>
+							</div>
+						</div>
+						<div class="task">
+							<div class="left">
+								<button class="taskstatus"></button
+								><span class="goal"> Complete Todo app on Fronend Mentor</span>
+							</div>
+							<div class="right">
+								<button class="cross">
+									<img src="images/icon-cross.svg" alt="" />
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="footer">
+						<div class="itemsLeft">items left</div>
+						<div class="filter">
+							<div class="all">All</div>
+							<div class="active">Active</div>
+							<div class="completed">Completed</div>
+						</div>
+						<div class="Clear">Clear Completed</div>
+						<div class="drag">Drag and drop to reorder list</div>
+					</div>
+				</div>
+			</section>
+		</div>
 
-    <script src="script.js"></script>
-  </body>
+		<script src="script.js"></script>
+	</body>
 </html>
